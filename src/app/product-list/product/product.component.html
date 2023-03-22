@@ -1,0 +1,19 @@
+<div class="card mb-3 p-1" *ngIf="product else noProduct">
+    <div class="row">
+      <div class="col-3">
+        <img src="/assets/images/{{ product.imageUrl }}" alt="" class="img-fluid rounded-start"> 
+        </div>
+        <div class="col-9">
+           <div class="card-body">
+               <h5 class="card-title">{{ product.name }}</h5>
+               <p class="card-text">{{ product.description }} </p>
+           </div>
+       </div>
+   </div>    
+ </div>
+
+ <ng-template #noProduct>
+   <div class="alert alert-warning">
+    no product
+   </div>
+ </ng-template>
